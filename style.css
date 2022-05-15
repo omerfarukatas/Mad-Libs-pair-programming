@@ -1,0 +1,13 @@
+#flex {
+    display: flex;
+    border: 1px;
+    justify-content: space-around;
+}
+
+.madLibsEdit {
+    max-width: 500px;
+}
+
+.madLibsPreview {
+    max-width: 500px;
+}
