@@ -169,22 +169,18 @@ function madLibsPreview() {
   }
 }
 
-function hotKey (){
-  let allInput = document.querySelectorAll(".input")
-
+function hotKey() {
+  let allInput = document.querySelectorAll(".input");
   for (let i = 0; i < allInput.length; i++) {
-    
-    allInput[i].addEventListener("keydown", function(event){
-
-      if (event.keyCode === 13){
-
+    allInput[i].addEventListener("keydown", function (event) {
+      if (event.keyCode === 13) {
         event.preventDefault();
-        if (allInput[i+1]){
-          allInput[i+1].focus();
+        if (allInput[i + 1]) {
+          allInput[i + 1].focus();
+        } else if (i === allInput.length - 1) {
+          document.querySelector(`#input0`).focus();
         }
-      } else if (i === allInput.length-1){ //THIS IS NOT WORKING
-        document.querySelector(`#input0`).focus();
       }
-    })
+    });
   }
 }
